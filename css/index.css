@@ -1,0 +1,555 @@
+/*Basic styles*/
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #000000;
+
+    background-color: #ffffff;
+}
+
+.wrapper {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0;
+
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 30px 10px #dbdbdb;
+            box-shadow: 0 0 30px 10px #dbdbdb;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+/*Header settings*/
+.header {
+    padding-bottom: 30px;
+    background: rgb(175,122,197);
+    background: linear-gradient(180deg, rgba(175,122,197,1) 20%, rgba(255,255,255,1) 100%);
+}
+
+.header h1 {
+    font-size: 24px;
+
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav a {
+    color: #ffffff;
+}
+
+.nav a:hover,
+.nav a:focus {
+    color: #633974;
+}
+
+.menu {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.my_photo {
+    text-align: center;
+}
+
+.my_photo img {
+    margin-top: 7px;
+    width: 160px;
+    height: auto;
+    border-radius: 50%;
+    filter: saturate(0.9);
+}
+
+.my_photo img {
+    animation-name: come;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+ 
+@keyframes come {
+    0% {
+        opacity: 0;
+        transform: translateX(-1000px) rotate(-360deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
+} 
+
+/*Main settings*/
+.main {
+    width: 300px;
+    margin: 0 auto;
+}
+
+/*Experience section settings*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    grid-template-areas: 
+      "description" 
+      "sedona" 
+      "cat";
+}
+
+.container p {
+    grid-area: description;
+    margin: 0;
+}
+
+.card-1 {
+    grid-area: sedona;
+}
+
+.card-2 {
+    grid-area: cat;
+}
+
+.card {
+    width: 300px;
+    margin: auto;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card h3 {
+    margin: 0;
+    width: 100%;
+
+    display: block;
+    
+    color: #ffffff;
+    text-align: center;
+    background-color: #AF7AC5;
+}
+
+.card img {
+    filter: blur(1px);
+    opacity: 0.8;
+}
+
+.card img:hover {
+    filter: blur(0);
+    opacity: 1;
+}
+
+/*Skills section settings*/
+#skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#skills li {
+    margin: 5px;
+    padding: 5px 10px;
+    color: #AF7AC5;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #AF7AC5;
+    border-radius: 5px;
+}
+
+#skills li:hover {
+    color: #D7BDE2;
+    border-color: #D7BDE2;
+}
+
+/*project section settings*/
+#projects ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.project a {
+    font-size: 1.1rem;
+    color: #a25cc0;
+}
+
+.project p {
+    margin: 0;
+    font-style: italic;
+}
+
+/*Message-form section settings*/
+.message-form {
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.connect-form {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    margin: 0 auto;
+    width: 250px;
+
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #C39BD3;
+
+    border-radius: 10px;
+}
+
+.connect-form label {
+    margin-top: 10px;
+}
+
+.connect-form label:first-child {
+    margin-top: 0;
+}
+
+.connect-form input,
+.connect-form textarea {
+    margin: 0;
+    padding: 10px;
+    width: 230px;
+
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #000000;
+
+    border-radius: 3px;
+    border: 1px solid #AF7AC5;
+}
+
+.connect-form input:focus,
+.connect-form textarea:focus {
+    background-color: #ffe88e;
+}
+
+.submit {
+    margin-top: 20px;
+    padding: 10px;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+
+    background-color: #F4D03F;
+    border-radius: 5px;
+    border: 1px solid #AF7AC5;
+}
+
+#messages li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 20px;
+
+    border-bottom: 2px solid #a79cac;
+}
+
+#messages li:last-child {
+    border-bottom: none;
+}
+
+#messages button {
+    margin: 0 10px;
+    margin-top: 10px;
+    padding: 10px;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #F4D03F;
+
+    border-radius: 5px;
+    border: none;
+}
+
+#messages input {
+    padding: 10px;
+    width: 100%;
+
+    border-radius: 5px;
+}
+
+.spanMessage,
+.savedSpan {
+    padding: 10px;
+    width: 100%;
+
+    text-align: center;
+    overflow-x: auto;
+}
+
+.remove {
+    background-color: #F1948A;
+}
+
+/*Footer settings*/
+
+.links {
+    display: flex;
+
+    padding-left: 20px;
+}
+
+.links li {
+    padding-right: 20px;
+}
+
+.links li:hover {
+    opacity: 0.5;
+}
+
+.connect {
+    padding-top: 20px;
+}
+
+.copiright {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgb(175,122,197);
+    background: linear-gradient(360deg, rgba(175,122,197,1) 20%, rgba(255,255,255,1) 100%);
+}
+
+/*Top button*/
+.top {
+    position: fixed;
+    bottom: 5px;
+    left: 75%;
+    z-index: 1;
+    left: calc(50% + 105px);
+}
+
+/*If Github not showing my repositories*/
+.reload {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #EC7063;
+    border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .wrapper {
+        width: 768px;
+    }
+
+    .header {
+        padding-bottom: 40px;
+    }
+
+    .header h1 {
+        padding-top: 25px;
+    }
+
+    .nav {
+        width: 720px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    
+        font-size: 1.1rem;
+    } 
+
+    .menu {
+        padding-top: 42px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu li {
+        padding-left: 20px;
+
+        font-size: 1rem;
+    }
+
+    .my_photo img {
+        margin-top: 7px;
+        width: 280px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .main {
+        width: 720px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .experience {
+        padding-top: 30px;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+          "description description" 
+          "sedona cat";
+    }
+    
+    #skills {
+        padding-top: 30px;
+    }
+
+    #skills ul {
+        justify-content: start;
+    }
+
+    #skills li {
+        margin: 5px;
+    }
+
+    #projects {
+        padding-top: 30px;
+    }
+
+    #projects ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .message-form {
+        width: 720px;
+        padding-top: 30px;
+    }
+
+    .connect-form {
+        width: 400px;
+    }
+
+    .connect-form input,
+    .connect-form textarea {
+        width: 378px;
+    }
+
+    .top {
+        left: calc(50% + 325px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        width: 1200px;
+    }
+
+    .header {
+        padding-bottom: 60px;
+    }
+
+    .nav {
+        width: 960px;
+
+        font-size: 1.1rem;
+    } 
+
+    .my_photo {
+        background-image: url("../img/code.png");
+        background-repeat: no-repeat;
+        background-size: 50% 100%;
+    }
+
+    .main {
+        width: 960px;
+        margin: 0 auto;
+        padding-top: 60px;
+    }
+
+    .experience {
+        padding-top: 50px;
+    }
+    
+    #skills {
+        padding-top: 50px;
+    }
+
+    #skills ul {
+        justify-content: space-between;
+    }
+
+    #projects {
+        padding-top: 50px;
+    }
+
+    #projects ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .message-form {
+        width: 960px;
+        padding-top: 50px;
+    }
+
+    .top {
+        left: calc(50% + 530px);
+    }
+}
+
+.years {
+    text-align: center;
+}
+
+.years h1 {
+    color: #633974;
+}
+
+.years h2 {
+    color: #633974;
+}
+
+.years p {
+    margin: 0 auto;
+    padding-bottom: 50px;
+    width: 500px;
+    text-align: justify;
+}
